@@ -227,7 +227,22 @@
               <div class="col-md-6 col-lg-4 mb-3">
                 <div class="hiro-power-box">
                   <h4 class="hiro-power-name">Hayabusa</h4>
-                  <a href="#" class="btn btn-light">Show Details</a>
+                  <img src="img/MLBB Wallpaper 4K/Hayabusa.png" alt="Hayabusa" class="mlbb-hiro-power-img">
+                  <a href="#" class="btn btn-light hiro-power-detail-button">Show Details</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-3">
+                <div class="hiro-power-box">
+                  <h4 class="hiro-power-name">Alucard</h4>
+                  <img src="img/MLBB Wallpaper 4K/Alucard Legend.png" alt="Alucard" class="mlbb-hiro-power-img">
+                  <a href="#" class="btn btn-light hiro-power-detail-button">Show Details</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-3">
+                <div class="hiro-power-box">
+                  <h4 class="hiro-power-name">Lapu Lapu</h4>
+                  <img src="img/MLBB Wallpaper 4K/Lapu Lapu.png" alt="Lapu Lapu" class="mlbb-hiro-power-img">
+                  <a href="#" class="btn btn-light hiro-power-detail-button">Show Details</a>
                 </div>
               </div>
             </div>
@@ -354,7 +369,18 @@
             console.log('Success!', response)
           })
           .catch(error => console.error('Error!', error.message))
-      })
+      });
     </script>
+
+<script type="text/javascript" src="img/js/vanilla-tilt.min.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".hiro-power-box"), {
+		max: 35,
+		speed: 1000,
+    scale: 1.05,
+    glare: true,
+	});
+</script>
+
   </body>
 </html>

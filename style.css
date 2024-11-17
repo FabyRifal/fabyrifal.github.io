@@ -23,9 +23,10 @@ section {
 /* My Hiro Power Section */
 .hiro-power-box {
     position: relative;
-    background-color: #0D6EFD;
+    background-color: #1c1e1c;
     border-radius: 10px;
     height: 500px;
+    transform-style: preserve-3d;
 }
 
 .hiro-power-box::before {
@@ -36,13 +37,78 @@ section {
     font-weight: bold;
     font-style: italic;
     top: 30px;
-    left: -100;
+    left: 50%;
+    transform: translate(-50%, 0);
     opacity: 0;
     transition: 0.5s;
 }
 
 .hiro-power-box:hover::before{
+    
+    opacity: 0.2;
+}
+
+.hiro-power-box::after {
+    content: 'HIRO POWER';
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+    top: 350px;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0);    
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.hiro-power-box:hover::after {
+   
+    opacity: 0.3;
+}
+
+.hiro-power-name {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+    transform: translate3d(0 ,0 , 50px);
+    transition: 0.5s;
+}
+
+.hiro-power-box:hover .hiro-power-name {
+top: 20px;
+opacity: 1;
+}
+
+.hiro-power-detail-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 50px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.hiro-power-box:hover .hiro-power-detail-button {
     opacity: 1;
+    bottom: 20px;
+
+}
+
+.mlbb-hiro-power-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 40px);
+    max-width: 400px;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.hiro-power-box:hover .mlbb-hiro-power-img {
+    transform: translate3d(-50%, -50%, 40px) rotate(15deg) scale(1.2);
 }
