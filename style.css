@@ -18,3 +18,31 @@ section {
 #gallery .row > * {
     padding: 0a;
 }
+
+
+/* My Hiro Power Section */
+.hiro-power-box {
+    position: relative;
+    background-color: #0D6EFD;
+    border-radius: 10px;
+    height: 500px;
+}
+
+.hiro-power-box::before {
+    content: 'MY';
+    position: absolute;
+    color: white;
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    top: 30px;
+    left: -100;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.hiro-power-box:hover::before{
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
